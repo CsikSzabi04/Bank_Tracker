@@ -1,0 +1,185 @@
+@import "tailwindcss";
+.App{margin: 10 auto; width: 100%;}
+.bank-tracker {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .summary-item {
+    text-align: center;
+  }
+  
+  .summary-item h3 {
+    margin: 0;
+    color: #666;
+  }
+  
+  .summary-item p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px 0 0;
+  }
+  
+  .transaction-form {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background: #45a049;
+  }
+  
+  .clear-btn {
+    background: #f44336;
+    margin-top: 20px;
+  }
+  
+  .clear-btn:hover {
+    background: #d32f2f;
+  }
+  
+  .transaction-history ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .transaction-history li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .transaction-history li.income .amount {
+    color: #4CAF50;
+  }
+  
+  .transaction-history li.expense .amount {
+    color: #f44336;
+  }
+  
+  .transaction-history .date {
+    color: #666;
+    font-size: 0.9em;
+    width: 150px;
+  }
+  
+  .transaction-history .description {
+    flex-grow: 1;
+    padding: 0 20px;
+  }
+  
+  .transaction-history .amount {
+    width: 100px;
+    text-align: right;
+    font-weight: bold;
+  }
+  /* Ensure charts have proper dimensions */
+.recharts-wrapper {
+    width: 100% !important;
+  }
+  
+  .recharts-surface {
+    width: 100% !important;
+    overflow: visible;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .recharts-legend-wrapper {
+      position: relative !important;
+      width: 100% !important;
+      margin-top: 20px;
+    }
+    
+    .recharts-default-legend {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  
+  /* Transaction list item hover effect */
+  .transaction-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Smooth transitions */
+  .chart-container {
+    transition: all 0.3s ease;
+  }
+  /* Crypto Tracker Styles */
+.crypto-list {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .crypto-item:hover {
+    background-color: #f9fafb;
+  }
+  
+  .price-up {
+    color: #10b981;
+  }
+  
+  .price-down {
+    color: #ef4444;
+  }
+  
+  .portfolio-item {
+    transition: all 0.2s ease;
+  }
+  
+  .portfolio-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .dual-column {
+      grid-template-columns: 1fr;
+    }
+  }
